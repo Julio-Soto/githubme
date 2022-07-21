@@ -4,22 +4,22 @@ import { useNavigate } from 'react-router-dom'
 
 
 function Input() {
-    const [userName, setUserName] = useState('')
+    const [name, setName] = useState('')
 
     const navigate = useNavigate()
 
     const handleSubmit = event => {
         event.preventDefault()
 
-        navigate('user',{ state: {userName : userName}})
+        navigate('/user',{ state: {userName : name}})
     }
 
     return (
         <div>
             <form onSubmit={handleSubmit}>
             <input
-                value={userName}
-                onChange={e => setUserName(e.target.value)}
+                value={name}
+                onChange={e => setName(e.target.value)}
                 placeholder="Github Username"
                 type="text"
                 name="Github Username"
