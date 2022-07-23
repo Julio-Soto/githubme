@@ -3,3 +3,57 @@
 .App {
   text-align: center;
 }
+.container {
+	font-family: "Roboto", sans-serif;
+	background-color: #161b22;
+	color: #f0f6fc;
+	padding-top: 1.5em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.title {
+	height: 48px;
+	margin-bottom: 1em;
+}
+.title-text {
+	font-size: 2em;
+	line-height: 48px;
+	margin-left: 0.3em;
+	vertical-align: top;
+}
+.img-container{
+	width: 200px;
+	height: 200px;
+}
+.user-img {
+	width: 100%;
+	box-sizing: border-box;
+	border: solid 5px #56d364;
+	border-radius: 100%;
+}
+.user-name {
+	font-size: 2.5em;
+	margin-bottom: 0.5em;
+}
+.user-login {
+	font-family: "Share Tech Mono", monospace;
+	font-size: 1.2em;
+	margin-bottom: 1.5em;
+	color: #56d364;
+}
+.personal-info {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.material-icons.md-em {
+	font-size: 1.4em;
+	color: #e3fbe3;
+}
+.info-text {
+	vertical-align: top;
+	margin-left: 0.2em;
+	font-size: 1.2em;
+}
