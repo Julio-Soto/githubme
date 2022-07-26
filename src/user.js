@@ -1,40 +1,38 @@
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import Testdata  from './userTestData'
+import RepoTestData from './repoTestData'
 import Userinfo  from './components/Userinfo'
 
 function User() {
     const [userData,setUserData] = useState({})
-    const [name, setName] = useState('')
-    const [company, setCompany] = useState('Company')
-    const [avatar_url,setAvatar_url] = useState('')
-    const [login, setLogin] = useState('')
-
+    
     const navigateParams = useLocation()
     const { userName } = navigateParams.state
 
     useEffect(() => {
-        //getData()
-        setTestData()
+        getUserData()
+        getRepoData()
+        //setUserData(Testdata)
     },[])
 
-    const getData = async () => {
+    const getUserData = async () => {
         const rawData = await fetch('https://api.github.com/users/' + userName)
         const data = await rawData.json()
 
         setUserData(data)
-        /*
-        setName(data.name)
-        if(data.company) setCompany(data.company)
-        setAvatar_url(data.avatar_url)
-        setLogin(data.login)
-        */
     }
 
-    const setTestData = () => {
-        setUserData(Testdata)
+    const getRepoData = async () => {
+        //const rawData = await fetch('https://api.github.com/users/' + userName + "/repos?per_page=100")
+        //const data = await rawData.json()
+        const data = RepoTestData
+        //console.log(data[1].name)
+        const sortedRepos = data.sort( (a,b) => {
+            return b.stargazers_count - a.stargazers_count
+        })
+        console.log(sortedRepos[0].name)
     }
-
 
     return (
         <Userinfo userData={userData}/>
