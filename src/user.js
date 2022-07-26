@@ -3,9 +3,11 @@ import { useLocation } from 'react-router-dom'
 import Testdata  from './userTestData'
 import RepoTestData from './repoTestData'
 import Userinfo  from './components/Userinfo'
+import Repos from './components/Repos'
 
 function User() {
     const [userData,setUserData] = useState({})
+    const [reposData, setReposData] = useState([])
     
     const navigateParams = useLocation()
     const { userName } = navigateParams.state
@@ -24,18 +26,24 @@ function User() {
     }
 
     const getRepoData = async () => {
-        //const rawData = await fetch('https://api.github.com/users/' + userName + "/repos?per_page=100")
-        //const data = await rawData.json()
-        const data = RepoTestData
-        //console.log(data[1].name)
-        const sortedRepos = data.sort( (a,b) => {
+        const rawData = await fetch('https://api.github.com/users/' + userName + "/repos?per_page=100")
+        const data = await rawData.json()
+        //const data = RepoTestData
+
+        const sortedRepos = data
+        .sort( (a,b) => {
             return b.stargazers_count - a.stargazers_count
         })
-        console.log(sortedRepos[0].name)
+        .splice(0,8)
+
+        setReposData(sortedRepos)
     }
 
     return (
-        <Userinfo userData={userData}/>
+        <div>
+            <Userinfo userData={userData}/>
+            <Repos reposData={reposData}/>
+        </div>
     )
 }
 

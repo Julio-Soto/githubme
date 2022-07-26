@@ -3,8 +3,6 @@ import githubLogo from '../github-logo.svg';
 
 function Userinfo( { userData } ) {
 
-
-
     const formatDate = rawDate => {
         const months = ['January','February','March','April','May','June','July','August','September','October','November','December']
         let d = new Date(rawDate);
