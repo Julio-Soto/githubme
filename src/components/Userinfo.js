@@ -38,6 +38,20 @@ function Userinfo( { userData } ) {
                     <span className='joined-date info-text'>Joined {formatDate(userData.created_at)}</span>
 	        	</span>
             </div>
+            <div class='social-info'>
+                <div class='social-item'>
+                    <span class='repo num'>{userData.public_repos}</span>
+                    <span class='social-label'>Repositories</span>
+                </div>
+                <div class='social-item'>
+                    <span class='following num'>{userData.followers}</span>
+                    <span class='social-label'>following</span>
+                </div>
+                <div class='social-item'>
+                    <span class='followers num'>{userData.following}</span>
+                    <span class='social-label'>followers</span>
+                </div>
+	</div>
         </div>
     )
 }
