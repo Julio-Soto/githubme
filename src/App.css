@@ -89,3 +89,17 @@
 	padding: 0.5em 0 0.5em 0;
 	text-transform: uppercase;
 }
+.num {
+	color: white;
+	font-size: 1.6em;
+}
+.social-label {
+	font-size: 0.6em;
+	font-weight: lighter;
+	letter-spacing: 0.2em;
+}
+@media screen and (max-width: 768px) {
+	.personal-info {
+		flex-direction: column;
+	}
+}

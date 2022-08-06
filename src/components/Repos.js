@@ -1,3 +1,4 @@
+import {StarFillIcon, RepoPullIcon, RepoForkedIcon} from '@primer/octicons-react'
 import '../styles/repos.css'
 
 function Repos( {reposData} ) {
@@ -9,13 +10,16 @@ function Repos( {reposData} ) {
                 {reposData.map(repo => (
                     <li><a href={repo.svn_url}>
                     <div class='repo-info'>
-                        <div class='repo-name'>{repo.name}</div>
+                        <div className='repo-header'>
+                            <div className='icon-container'><RepoPullIcon size='20' /></div>
+                            <div class='repo-name'>{repo.name}</div>
+                        </div>
                         <p class='repo-description'>{repo.description} </p>
                         <div class='stats'>
                             <div class='stats-left'>
                                 <span>{repo.language}</span>
-                                <span>{repo.stargazers_count}</span>
-                                <span>{repo.forks_count}</span>
+                                <span><StarFillIcon/>{repo.stargazers_count}</span>
+                                <span><RepoForkedIcon />{repo.forks_count}</span>
                             </div>
                             <div class='stats-right'>
                                 <span>{repo.size.toLocaleString()}Kb</span>
