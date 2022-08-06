@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom'
+import githubLogo from './github-logo.svg';
+
+import './styles/input.css'
 
 
 
@@ -15,7 +18,8 @@ function Input() {
     }
 
     return (
-        <div>
+        <div className="input-container">
+            <img src={githubLogo} alt='github-logo'/>
             <form onSubmit={handleSubmit}>
             <input
                 value={name}

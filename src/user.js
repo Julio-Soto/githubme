@@ -6,7 +6,7 @@ import Userinfo  from './components/Userinfo'
 import Repos from './components/Repos'
 
 function User() {
-    const [userData,setUserData] = useState({})
+    const [userData,setUserData] = useState(null)
     const [reposData, setReposData] = useState([])
     
     const navigateParams = useLocation()
@@ -41,8 +41,8 @@ function User() {
 
     return (
         <div>
-            <Userinfo userData={userData}/>
-            <Repos reposData={reposData}/>
+            { userData && <Userinfo userData={userData}/> }
+            { reposData && <Repos reposData={reposData}/> }
         </div>
     )
 }
