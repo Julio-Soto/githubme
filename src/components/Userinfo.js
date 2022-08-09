@@ -27,11 +27,11 @@ function Userinfo( { userData } ) {
             <div className='personal-info'>
                 <span className='personal-item'>
                     <span className="material-icons md-em">business</span>
-                    <span className='company-name info-text'>{userData.company}</span>
+                    <span className='company-name info-text'>{userData.company? userData.company : 'Company'}</span>
 		        </span>
                 <span className='personal-item'>
                     <span className="material-icons md-em">place</span>
-                    <span className='location info-text'>{userData.location}</span>
+                    <span className='location info-text'>{userData.location? userData.location : 'Location'}</span>
 	        	</span>
                 <span className='personal-item'>
                     <span className="material-icons md-em ">event</span>

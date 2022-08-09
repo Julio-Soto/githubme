@@ -30,9 +30,7 @@ a {
 	padding: 2em;
 	margin: 1em;
 	border-radius: 4px;
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-	/*box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-   /* box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3) , 0 0 40px rgba(0, 0, 0, 0.1) inset;*/
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;	
 }
 .repo-name {
     font-family: "Share Tech Mono", monospace;

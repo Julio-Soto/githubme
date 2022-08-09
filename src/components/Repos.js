@@ -18,8 +18,8 @@ function Repos( {reposData} ) {
                         <div class='stats'>
                             <div class='stats-left'>
                                 <span>{repo.language}</span>
-                                <span><StarFillIcon/>{repo.stargazers_count}</span>
-                                <span><RepoForkedIcon />{repo.forks_count}</span>
+                                <span><StarFillIcon/>{repo.stargazers_count.toLocaleString()}</span>
+                                <span><RepoForkedIcon />{repo.forks_count.toLocaleString()}</span>
                             </div>
                             <div class='stats-right'>
                                 <span>{repo.size.toLocaleString()}Kb</span>
