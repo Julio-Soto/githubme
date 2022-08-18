@@ -17,4 +17,3 @@ function App() {
 }
 
 export default App;
-// <img src={githubLogo} className="App-logo" alt="logo" />

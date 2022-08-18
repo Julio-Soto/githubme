@@ -8,20 +8,20 @@ function Repos( {reposData} ) {
         <div className='repo-list'>
             <ul>
                 {reposData.map(repo => (
-                    <li><a href={repo.svn_url}>
-                    <div class='repo-info'>
+                    <li key={repo.name}><a href={repo.svn_url}>
+                    <div className='repo-info'>
                         <div className='repo-header'>
                             <div className='icon-container'><RepoPullIcon size='20' /></div>
-                            <div class='repo-name'>{repo.name}</div>
+                            <div className='repo-name'>{repo.name}</div>
                         </div>
-                        <p class='repo-description'>{repo.description} </p>
-                        <div class='stats'>
-                            <div class='stats-left'>
+                        <p className='repo-description'>{repo.description} </p>
+                        <div className='stats'>
+                            <div className='stats-left'>
                                 <span>{repo.language}</span>
                                 <span><StarFillIcon/>{repo.stargazers_count.toLocaleString()}</span>
                                 <span><RepoForkedIcon />{repo.forks_count.toLocaleString()}</span>
                             </div>
-                            <div class='stats-right'>
+                            <div className='stats-right'>
                                 <span>{repo.size.toLocaleString()}Kb</span>
                             </div>
                         </div>
