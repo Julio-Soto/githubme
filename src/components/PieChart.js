@@ -1,7 +1,7 @@
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Pie } from "react-chartjs-2";
 import "../styles/piechart.css";
-import pieChartIcon from "../pie-chart.svg";
+import pieChartIcon from "../img/pie-chart.svg";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 

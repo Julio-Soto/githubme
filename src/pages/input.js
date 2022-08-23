@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import githubLogo from "./github-logo.svg";
+import githubLogo from "../img/github-logo.svg";
 
-import "./styles/input.css";
+import "../styles/input.css";
 
 function Input() {
   const [name, setName] = useState("");

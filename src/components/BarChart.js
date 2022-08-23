@@ -1,4 +1,4 @@
-import graphIcon from "../graph.svg";
+import graphIcon from "../img/graph.svg";
 import {
   Chart as ChartJS,
   CategoryScale,

@@ -1,4 +1,4 @@
-import githubLogo from "../github-logo.svg";
+import githubLogo from "../img/github-logo.svg";
 
 function Userinfo({ userData }) {
   const formatDate = (rawDate) => {

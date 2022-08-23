@@ -1,6 +1,6 @@
 import "./App.css";
-import Input from "./input.js";
-import User from "./user.js";
+import Input from "./pages/input.js";
+import User from "./pages/user.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {

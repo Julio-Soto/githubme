@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-//import Testdata  from './userTestData'
-//import RepoTestData from './repoTestData'
-import Userinfo from "./components/Userinfo";
-import Repos from "./components/Repos";
-import PieChart from "./components/PieChart";
-import BarChart from "./components/BarChart";
+//import Testdata  from '../util/userTestData'
+//import RepoTestData from '../util/repoTestData'
+import Userinfo from "../components/Userinfo";
+import Repos from "../components/Repos";
+import PieChart from "../components/PieChart";
+import BarChart from "../components/BarChart";
 
 function User() {
   const [userData, setUserData] = useState(null);
