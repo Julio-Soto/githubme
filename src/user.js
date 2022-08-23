@@ -5,11 +5,12 @@ import { useLocation } from 'react-router-dom'
 import Userinfo  from './components/Userinfo'
 import Repos from './components/Repos'
 import PieChart from './components/PieChart'
+import BarChart from './components/BarChart'
 
 function User() {
     const [userData,setUserData] = useState(null)
     const [reposData, setReposData] = useState([])
-    const [pieData, setPieData] = useState({})
+    const [pieData, setPieData] = useState(null)
     
     
     const navigateParams = useLocation()
@@ -35,7 +36,6 @@ function User() {
 
         let languages = new Map()
 
-        console.log(data.length)
         for(let i=0; i < data.length; ++i){
             if(data[i].language){
                 if( languages.has(data[i].language) )
@@ -65,6 +65,7 @@ function User() {
         <div>
             { userData &&  <Userinfo userData={userData}/> }
             { pieData &&  <PieChart pieData={pieData}/> }
+            <BarChart/>
             { reposData && <Repos reposData={reposData}/> }
         </div>
     )
