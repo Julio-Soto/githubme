@@ -1,0 +1,15 @@
+.barchart-container {
+    width: 500px;
+    padding: 2.5em;
+    padding-top: 5em;
+  }
+.graph-header {
+    height: 48px;
+    margin-bottom: 1em;
+}
+.graph-title {
+    font-size: 2em;
+    line-height: 48px;
+    margin-left: 0.3em;
+    vertical-align: top;
+}

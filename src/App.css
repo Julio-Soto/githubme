@@ -17,6 +17,11 @@
   align-items: center;
   justify-content: center;
 }
+.charts-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .title {
   height: 48px;
   margin-bottom: 1em;
@@ -104,3 +109,8 @@
     flex-direction: column;
   }
 }
+@media screen and (max-width: 1024px) {
+	.charts-container {
+	  flex-direction: column;
+	}
+  }

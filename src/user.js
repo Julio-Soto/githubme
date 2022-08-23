@@ -9,7 +9,7 @@ import BarChart from "./components/BarChart";
 
 function User() {
   const [userData, setUserData] = useState(null);
-  const [reposData, setReposData] = useState([]);
+  const [reposData, setReposData] = useState(null);
   const [pieData, setPieData] = useState(null);
 
   const navigateParams = useLocation();
@@ -62,8 +62,10 @@ function User() {
   return (
     <div>
       {userData && <Userinfo userData={userData} />}
-      {pieData && <PieChart pieData={pieData} />}
-      <BarChart />
+      <div className="charts-container">
+        {pieData && <PieChart pieData={pieData} />}
+        {reposData && <BarChart reposData={reposData} />}
+      </div>
       {reposData && <Repos reposData={reposData} />}
     </div>
   );

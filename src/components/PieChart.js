@@ -1,16 +1,15 @@
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Pie } from "react-chartjs-2";
-import "../styles/chart.css";
+import "../styles/piechart.css";
 import pieChartIcon from "../pie-chart.svg";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 function PieChart({ pieData }) {
-  console.table(pieData);
 
   return (
-    <div className="chart-container">
-      <div className="pie-container">
+    
+      <div className="piechart-container">
         <div className="graph-header">
           <img src={pieChartIcon} alt="Pie Chart Icon" />
           <span className="graph-title">Top Languages</span>
@@ -44,7 +43,7 @@ function PieChart({ pieData }) {
           }}
         />
       </div>
-    </div>
+    
   );
 }
 

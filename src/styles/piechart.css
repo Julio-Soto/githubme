@@ -1,12 +1,7 @@
-.pie-container {
-  width: 500px;
-  padding: 3em;
-  padding-top: 5em;
-}
-.chart-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.piechart-container {
+    width: 350px;
+    padding: 3em;
+    padding-top: 5em;
 }
 .graph-header {
   height: 48px;
