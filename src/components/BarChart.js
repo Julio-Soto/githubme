@@ -22,6 +22,7 @@ ChartJS.register(
 
 export const options = {
   responsive: true,
+  maintainAspectRatio: false,
   plugins: {
     legend: {
       position: "top",
@@ -35,10 +36,10 @@ export const options = {
 
 function BarChart( {reposData}) {
     const barLabels = reposData.map(repo => repo.name)
-    const barData = reposData.map(repo => repo.stargazers_count)
+    const barData = reposData.map(repo => repo.stargazers_count).splice(0,5)
   
-console.log(barLabels)
-const labels = barLabels
+const labels = barLabels.splice(0,5)
+console.log(labels)
   return (
     <div className="barchart-container">  
     <div className="graph-header">
@@ -53,7 +54,14 @@ const labels = barLabels
             {
               label: "Stars per Repo",
               data: barData,
-              backgroundColor: "rgba(255, 99, 132, 0.5)",
+              backgroundColor: [
+                "rgba(255, 99, 132, 0.7)",
+                "rgba(54, 162, 235, 0.7)",
+                "rgba(255, 206, 86, 0.7)",
+                "rgba(75, 192, 192, 0.7)",
+                "rgba(153, 102, 255, 0.7)",
+                "rgba(255, 159, 64, 0.7)",
+              ]
             },
           ],
         }}

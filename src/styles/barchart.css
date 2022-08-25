@@ -1,9 +1,15 @@
 .barchart-container {
-    width: 500px;
+    width: 400px;
+    height: 400px;
+    background-color: #eee;
     padding: 2.5em;
     padding-top: 5em;
+    margin-left: 3em;
+    border-radius: 7px;
   }
 .graph-header {
+    display: none;
+    color: #444;
     height: 48px;
     margin-bottom: 1em;
 }
@@ -13,8 +19,8 @@
     margin-left: 0.3em;
     vertical-align: top;
 }
-@media screen and (max-width: 1024px) {
+/*@media screen and (max-width: 1024px) {
 	.barchart-container {
-	  width: 320px;
+	    width: 320px;
 	}
-}
+}*/
