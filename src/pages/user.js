@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import Testdata  from '../util/userTestData'
-import RepoTestData from '../util/repoTestData'
+//import Testdata  from '../util/userTestData'
+//import RepoTestData from '../util/repoTestData'
 import Userinfo from "../components/Userinfo";
 import Repos from "../components/Repos";
 import PieChart from "../components/PieChart";
@@ -16,9 +16,9 @@ function User() {
   const { userName } = navigateParams.state;
 
   useEffect(() => {
-   // getUserData();
+    getUserData();
     getRepoData();
-    setUserData(Testdata)
+    //setUserData(Testdata)
   }, []);
 
   const getUserData = async () => {
@@ -29,11 +29,11 @@ function User() {
   };
 
   const getRepoData = async () => {
-    // const rawData = await fetch(
-    //   "https://api.github.com/users/" + userName + "/repos?per_page=100"
-    // );
-    // const data = await rawData.json();
-    const data = RepoTestData
+    const rawData = await fetch(
+       "https://api.github.com/users/" + userName + "/repos?per_page=100"
+     );
+    const data = await rawData.json();
+    //const data = RepoTestData
 
     let languages = new Map();
 
