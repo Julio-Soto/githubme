@@ -60,11 +60,11 @@ function Userinfo({ userData }) {
           <span className="social-label">Repositories</span>
         </div>
         <div className="social-item">
-          <span className="num">{userData.followers}</span>
+          <span className="num">{userData.following}</span>
           <span className="social-label">following</span>
         </div>
         <div className="social-item">
-          <span className="num">{userData.following}</span>
+          <span className="num">{userData.followers}</span>
           <span className="social-label">followers</span>
         </div>
       </div>
